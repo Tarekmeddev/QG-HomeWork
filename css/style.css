@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+}
+:root{
+    --bg-color: linear-gradient( 135deg, #3C8CE7 10%, #00EAFF 100%);
+    --main-color:rgba(255, 255, 255, 0.486);
+    --second-color:hsl(202, 100%, 50%);
+    --text-color:rgb(0, 0, 0);
+    --fav-bx:rgba(255, 255, 255, 0.534);
+    --after-color:#154ce22c;
+    --fav-QT:rgba(25, 171, 255, 0.301);
+    --scroll-color:#fff;
+
+}
+.dark{
+    --bg-color: linear-gradient( 135deg, #03001C 10%, #301E67 100% );
+    --second-color:#006eff;
+    --main-color:rgba(49, 49, 49, 0.479);
+    --text-color:rgb(255, 255, 255);
+    --after-color:rgba(255, 255, 255, 0.411);
+    --fav-bx:rgba(35, 26, 68, 0.397);
+    --fav-QT:rgb(43, 43, 43);
+    --scroll-color:rgb(0, 0, 0);
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: var(--bg-color);
+    color: var(--text-color);
+    position: relative;
+    overflow:hidden;
+}
+/* container setting */
+.container{
+    margin: 0 auto;
+    padding: 0 15px;
+}
+@media (min-width:768px) {
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width:990px) {
+    .container{
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+
+@media (min-width:1400px) {
+    .container{
+        width: 1300px;
+    }
+}
+
+/* start header styling */
+header{
+    width: 100%;
+    background: var(--main-color);
+    backdrop-filter: blur(100px);
+    padding: 10px 0;
+}
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .container h1.logo{
+    letter-spacing: -2px;
+    font-weight: 900;
+    color: var(--text-color);
+}
+header .container h1.logo::first-letter{
+    color: var(--second-color);
+}
+header .container nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+header .container nav button{
+    background-color: var(--second-color);
+    color: var(--text-color);
+    padding: 4px 10px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* end header styling */
+
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.qouteBx{
+    width: 650px;
+    min-height: 150px;
+    background-color: var(--main-color);
+    backdrop-filter: blur(5px);
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: rgba(49, 49, 49, 0.1) 0px 8px 24px;
+    overflow: hidden;
+}
+
+.qouteBx .title{
+    text-transform: capitalize;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 10px 0;
+    position: relative;
+}
+@media (max-width:800px) {
+    .qouteBx{
+      width: 95%;
+    }
+    .qouteBx .title{
+        font-size: 25px;
+    }
+}
+.qouteBx .title::before{
+    content: "";
+    width: 150px;
+    height: 6px;
+    border-radius: 5px;
+    background-color: var(--second-color);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+}
+.qouteBx .content{
+    position: relative;
+    margin-bottom: 80px;
+
+}
+.qouteBx .content h3 {
+    font-weight: 500;
+    min-height: 100px;
+    font-size: 16px;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom:30px ;
+}
+.qouteBx .content h3::before,.qouteBx .content h3::after{
+    content: '"';
+    margin: 15px;
+    font-size: 25px;
+    color: var(--second-color);
+}
+.qouteBx .content p{
+    text-transform: capitalize;
+    float: right;
+    position: relative;
+    font-weight: 300;
+}
+
+.qouteBx .content p::before{
+    content: "";
+    width: 1200px;
+    height: 4px;
+    background-color: var(--after-color);
+    position: absolute;
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 105%;
+}
+.qouteBx .content p::after{
+    content: "";
+    width: 1200px;
+    height: 4px;
+    background-color: var(--after-color);
+    position: absolute;
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 110%;
+}
+.actionBx{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.actionBx > div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.actionBx > div button{
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--second-color);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 900;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.actionBx .save button:nth-child(2){
+    width: fit-content;
+    padding: 0 10px;
+    border-radius: 15px;
+}
+.actionBx .save button:nth-child(2) i{
+    margin-left: 5px;
+}
+.actionBx .save button.fav{
+    color: #555;
+}
+.actionBx .save button.fav.active{
+    color: rgb(9, 20, 175);
+}
+button.pre{
+    transform: rotate(180deg);
+}
+
+.favBx{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: -100%;
+    left: 100%;
+    transform: translate(-50%,-50%);
+    width:850px;
+    min-height:700px ;
+    max-height: 750px;
+    overflow:scroll;
+    overflow-x: hidden;
+    background: var(--fav-bx);
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+    padding: 40px;
+    transform: scale(0) ;
+    opacity: 0;
+    z-index: -999;
+    transition: .8s ease-in-out;
+}
+.favBx::-webkit-scrollbar{
+    width: 10px;
+    background-color:var(--scroll-color);
+    border-radius: 20px;
+    overflow: hidden;
+}
+.favBx::-webkit-scrollbar-thumb{
+    background-color: var(--second-color);
+    border-radius: 20px;
+
+}
+@media (max-width:900px) {
+    .favBx{
+        padding: 10px;
+        padding-top: 60px;
+        margin-top: 40px;
+        width: 90%;
+        min-height: 80vh;
+        max-height:calc(100vh - 60px) ;
+    }
+}
+.favBx.active{
+    transform: scale(1)  translate(-50%,-50%) ;
+    opacity: 1;
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+
+}
+.favBx .qFav{
+    width: 100%;
+    color: var(--text-color);
+    background: var(--fav-QT);
+    padding: 20px 40px;
+    border-radius: 10px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (max-width:900px) {
+    .favBx .qFav{
+        padding:10px 20px;
+        gap: 15px;
+    }
+}
+.favBx .qFav p {
+    font-size: 14px;
+}
+.favBx .qFav p span{
+    display: block;
+    text-transform: capitalize;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--second-color);
+}
+.favBx .qFav button{
+    background-color: var(--second-color);
+    color: var(--text-color);
+    padding:  5px 10px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-weight: bold;
+    cursor: pointer;
+    color: #FFf;
+    font-size: 20px;
+}
+.closeBtn{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.test{
+    text-align: center;
+  
+}
+
+.copie.animet{
+    animation: Make 1.5s linear forwards;
+    
+}
+@keyframes Make {
+    0%   {background-color:#fff;
+        color:var(--text-color);
+}
+    35%  {background-color:var(--second-color);
+    color: #fff; }
+    100% {background-color:#fff;
+        color:var(--text-color); }
+}
+.copymsg,.addmsg{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    position: absolute;
+    top: 10%;
+    left: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--bg-color);
+    color: #fff;
+    z-index: 9999;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-150%);
+    transition: .6s;
+}
+@media (max-width:800px) {
+    .copymsg,.addmsg{
+        width: 70%;
+    }
+}
+.copymsg.active,.addmsg.active{
+    filter: blur(0px);
+    transform: translateX(0%);
+    opacity: 1;
+
+}
+.copymsg p,.addmsg p {
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-right: 5px;
+}
+.copymsg i,.addmsg i {
+    font-size: 25px;
+}
